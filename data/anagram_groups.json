@@ -1,0 +1,888 @@
+{
+  "1": {
+    "key": "apst",
+    "words": [
+      "atps",
+      "pats",
+      "ptas",
+      "taps"
+    ]
+  },
+  "2": {
+    "key": "aeirs",
+    "words": [
+      "aires",
+      "aries",
+      "arise",
+      "raise"
+    ]
+  },
+  "3": {
+    "key": "adeln",
+    "words": [
+      "alden",
+      "eland",
+      "laden",
+      "nelda"
+    ]
+  },
+  "4": {
+    "key": "aeglr",
+    "words": [
+      "alger",
+      "elgar",
+      "glare",
+      "lager",
+      "large",
+      "regal"
+    ]
+  },
+  "5": {
+    "key": "adens",
+    "words": [
+      "andes",
+      "danes",
+      "deans",
+      "sedan",
+      "sedna",
+      "snead"
+    ]
+  },
+  "6": {
+    "key": "adenr",
+    "words": [
+      "andre",
+      "arden",
+      "daren",
+      "nader"
+    ]
+  },
+  "7": {
+    "key": "aegln",
+    "words": [
+      "angel",
+      "angle",
+      "galen",
+      "glean"
+    ]
+  },
+  "9": {
+    "key": "aenps",
+    "words": [
+      "aspen",
+      "napes",
+      "neaps",
+      "panes"
+    ]
+  },
+  "10": {
+    "key": "aorst",
+    "words": [
+      "roast",
+      "rotas",
+      "sorta",
+      "taros"
+    ]
+  },
+  "11": {
+    "key": "abels",
+    "words": [
+      "bales",
+      "basel",
+      "blase",
+      "sable"
+    ]
+  },
+  "12": {
+    "key": "abest",
+    "words": [
+      "baste",
+      "bates",
+      "beast",
+      "beats",
+      "betas"
+    ]
+  },
+  "13": {
+    "key": "abder",
+    "words": [
+      "bared",
+      "beard",
+      "bread",
+      "debar"
+    ]
+  },
+  "15": {
+    "key": "beors",
+    "words": [
+      "boers",
+      "bores",
+      "robes",
+      "sober"
+    ]
+  },
+  "16": {
+    "key": "abinr",
+    "words": [
+      "bairn",
+      "brain",
+      "brian",
+      "rabin"
+    ]
+  },
+  "17": {
+    "key": "acers",
+    "words": [
+      "acres",
+      "cares",
+      "races",
+      "scare"
+    ]
+  },
+  "19": {
+    "key": "adnor",
+    "words": [
+      "adorn",
+      "drano",
+      "norad",
+      "radon"
+    ]
+  },
+  "21": {
+    "key": "eilsv",
+    "words": [
+      "evils",
+      "levis",
+      "lives",
+      "veils"
+    ]
+  },
+  "23": {
+    "key": "enrst",
+    "words": [
+      "ernst",
+      "rents",
+      "stern",
+      "terns"
+    ]
+  },
+  "24": {
+    "key": "eerst",
+    "words": [
+      "ester",
+      "reset",
+      "steer",
+      "trees"
+    ]
+  },
+  "25": {
+    "key": "defil",
+    "words": [
+      "fidel",
+      "field",
+      "filed",
+      "flied"
+    ]
+  },
+  "26": {
+    "key": "aehrt",
+    "words": [
+      "earth",
+      "harte",
+      "hater",
+      "heart"
+    ]
+  },
+  "27": {
+    "key": "ehnor",
+    "words": [
+      "heron",
+      "honer",
+      "horne",
+      "rhone"
+    ]
+  },
+  "28": {
+    "key": "aekst",
+    "words": [
+      "keats",
+      "skate",
+      "stake",
+      "steak",
+      "takes",
+      "teaks"
+    ]
+  },
+  "29": {
+    "key": "aelry",
+    "words": [
+      "early",
+      "layer",
+      "leary",
+      "relay"
+    ]
+  },
+  "30": {
+    "key": "abelm",
+    "words": [
+      "amble",
+      "blame",
+      "mabel",
+      "mable",
+      "melba"
+    ]
+  },
+  "31": {
+    "key": "ademn",
+    "words": [
+      "admen",
+      "amend",
+      "maned",
+      "medan",
+      "named"
+    ]
+  },
+  "32": {
+    "key": "aemns",
+    "words": [
+      "manes",
+      "manse",
+      "means",
+      "mensa",
+      "names"
+    ]
+  },
+  "33": {
+    "key": "eilms",
+    "words": [
+      "limes",
+      "miles",
+      "selim",
+      "slime",
+      "smile"
+    ]
+  },
+  "34": {
+    "key": "amnor",
+    "words": [
+      "manor",
+      "moran",
+      "norma",
+      "ramon",
+      "roman"
+    ]
+  },
+  "35": {
+    "key": "aelnp",
+    "words": [
+      "nepal",
+      "panel",
+      "penal",
+      "plane"
+    ]
+  },
+  "36": {
+    "key": "aelpt",
+    "words": [
+      "leapt",
+      "lepta",
+      "patel",
+      "petal",
+      "plate",
+      "pleat"
+    ]
+  },
+  "37": {
+    "key": "ceops",
+    "words": [
+      "copes",
+      "copse",
+      "pecos",
+      "scope"
+    ]
+  },
+  "38": {
+    "key": "deopr",
+    "words": [
+      "doper",
+      "pedro",
+      "pored",
+      "roped"
+    ]
+  },
+  "39": {
+    "key": "aeprt",
+    "words": [
+      "apter",
+      "petra",
+      "prate",
+      "taper"
+    ]
+  },
+  "40": {
+    "key": "deirs",
+    "words": [
+      "dries",
+      "redis",
+      "rides",
+      "sired"
+    ]
+  },
+  "41": {
+    "key": "abers",
+    "words": [
+      "bares",
+      "baser",
+      "bears",
+      "braes",
+      "sabre"
+    ]
+  },
+  "42": {
+    "key": "adeis",
+    "words": [
+      "aides",
+      "aside",
+      "ideas",
+      "sadie"
+    ]
+  },
+  "43": {
+    "key": "aehls",
+    "words": [
+      "hales",
+      "heals",
+      "leash",
+      "sahel",
+      "shale"
+    ]
+  },
+  "44": {
+    "key": "aelms",
+    "words": [
+      "lames",
+      "males",
+      "meals",
+      "salem",
+      "selma"
+    ]
+  },
+  "45": {
+    "key": "enost",
+    "words": [
+      "notes",
+      "onset",
+      "seton",
+      "steno",
+      "stone",
+      "tones"
+    ]
+  },
+  "46": {
+    "key": "ehirs",
+    "words": [
+      "heirs",
+      "hires",
+      "sheri",
+      "shire"
+    ]
+  },
+  "47": {
+    "key": "aelst",
+    "words": [
+      "least",
+      "slate",
+      "stael",
+      "stale",
+      "steal",
+      "tales",
+      "teals",
+      "tesla"
+    ]
+  },
+  "48": {
+    "key": "einst",
+    "words": [
+      "inset",
+      "stein",
+      "stine",
+      "tines"
+    ]
+  },
+  "49": {
+    "key": "cersu",
+    "words": [
+      "cruse",
+      "cures",
+      "curse",
+      "sucre"
+    ]
+  },
+  "50": {
+    "key": "aesst",
+    "words": [
+      "asset",
+      "sates",
+      "seats",
+      "tessa"
+    ]
+  },
+  "51": {
+    "key": "acost",
+    "words": [
+      "ascot",
+      "coast",
+      "coats",
+      "tacos",
+      "tosca"
+    ]
+  },
+  "52": {
+    "key": "deirv",
+    "words": [
+      "diver",
+      "drive",
+      "rived",
+      "verdi"
+    ]
+  },
+  "53": {
+    "key": "abelr",
+    "words": [
+      "abler",
+      "baler",
+      "blare",
+      "blear"
+    ]
+  },
+  "54": {
+    "key": "ahkns",
+    "words": [
+      "ankhs",
+      "hanks",
+      "khans",
+      "shank"
+    ]
+  },
+  "55": {
+    "key": "ainst",
+    "words": [
+      "antis",
+      "saint",
+      "satin",
+      "stain"
+    ]
+  },
+  "56": {
+    "key": "acder",
+    "words": [
+      "arced",
+      "cadre",
+      "cared",
+      "cedar",
+      "raced"
+    ]
+  },
+  "57": {
+    "key": "arsty",
+    "words": [
+      "artsy",
+      "satyr",
+      "stray",
+      "trays"
+    ]
+  },
+  "58": {
+    "key": "aerst",
+    "words": [
+      "aster",
+      "rates",
+      "resat",
+      "stare",
+      "tares",
+      "taser",
+      "tears",
+      "treas"
+    ]
+  },
+  "59": {
+    "key": "airst",
+    "words": [
+      "astir",
+      "sitar",
+      "stair",
+      "stria",
+      "tarsi"
+    ]
+  },
+  "60": {
+    "key": "aersv",
+    "words": [
+      "avers",
+      "raves",
+      "saver",
+      "versa"
+    ]
+  },
+  "61": {
+    "key": "acepr",
+    "words": [
+      "caper",
+      "crape",
+      "pacer",
+      "recap"
+    ]
+  },
+  "62": {
+    "key": "acert",
+    "words": [
+      "caret",
+      "cater",
+      "crate",
+      "react",
+      "trace"
+    ]
+  },
+  "63": {
+    "key": "acprs",
+    "words": [
+      "carps",
+      "craps",
+      "scarp",
+      "scrap"
+    ]
+  },
+  "64": {
+    "key": "cdeor",
+    "words": [
+      "coder",
+      "cored",
+      "credo",
+      "decor"
+    ]
+  },
+  "65": {
+    "key": "cinos",
+    "words": [
+      "coins",
+      "icons",
+      "scion",
+      "sonic"
+    ]
+  },
+  "66": {
+    "key": "certu",
+    "words": [
+      "cruet",
+      "cuter",
+      "eruct",
+      "truce"
+    ]
+  },
+  "67": {
+    "key": "adels",
+    "words": [
+      "dales",
+      "deals",
+      "lades",
+      "leads"
+    ]
+  },
+  "68": {
+    "key": "adert",
+    "words": [
+      "dater",
+      "rated",
+      "tared",
+      "trade",
+      "tread"
+    ]
+  },
+  "69": {
+    "key": "deist",
+    "words": [
+      "deist",
+      "diets",
+      "edits",
+      "sited",
+      "tides"
+    ]
+  },
+  "70": {
+    "key": "deils",
+    "words": [
+      "delis",
+      "idles",
+      "sidle",
+      "slide"
+    ]
+  },
+  "71": {
+    "key": "adepr",
+    "words": [
+      "drape",
+      "padre",
+      "pared",
+      "raped"
+    ]
+  },
+  "72": {
+    "key": "aenrs",
+    "words": [
+      "earns",
+      "nears",
+      "saner",
+      "snare"
+    ]
+  },
+  "73": {
+    "key": "eimrs",
+    "words": [
+      "emirs",
+      "mires",
+      "miser",
+      "rimes"
+    ]
+  },
+  "74": {
+    "key": "eimst",
+    "words": [
+      "emits",
+      "items",
+      "mites",
+      "smite",
+      "times"
+    ]
+  },
+  "75": {
+    "key": "efilr",
+    "words": [
+      "filer",
+      "flier",
+      "lifer",
+      "rifle"
+    ]
+  },
+  "76": {
+    "key": "aegrs",
+    "words": [
+      "gears",
+      "rages",
+      "sager",
+      "sarge"
+    ]
+  },
+  "77": {
+    "key": "egors",
+    "words": [
+      "goers",
+      "gores",
+      "gorse",
+      "ogres",
+      "regos"
+    ]
+  },
+  "78": {
+    "key": "aehrs",
+    "words": [
+      "hares",
+      "hears",
+      "rheas",
+      "share",
+      "shear"
+    ]
+  },
+  "79": {
+    "key": "inors",
+    "words": [
+      "irons",
+      "noirs",
+      "noris",
+      "rosin"
+    ]
+  },
+  "80": {
+    "key": "ailrs",
+    "words": [
+      "lairs",
+      "liars",
+      "rails",
+      "rials"
+    ]
+  },
+  "81": {
+    "key": "aelps",
+    "words": [
+      "lapse",
+      "leaps",
+      "pales",
+      "peals",
+      "pleas",
+      "sepal"
+    ]
+  },
+  "82": {
+    "key": "aelsv",
+    "words": [
+      "laves",
+      "salve",
+      "slave",
+      "vales"
+    ]
+  },
+  "83": {
+    "key": "loops",
+    "words": [
+      "loops",
+      "pools",
+      "sloop",
+      "spool"
+    ]
+  },
+  "84": {
+    "key": "aemrs",
+    "words": [
+      "mares",
+      "maser",
+      "reams",
+      "smear"
+    ]
+  },
+  "85": {
+    "key": "aemst",
+    "words": [
+      "mates",
+      "meats",
+      "steam",
+      "tames",
+      "teams"
+    ]
+  },
+  "86": {
+    "key": "eimrt",
+    "words": [
+      "merit",
+      "mitre",
+      "remit",
+      "timer"
+    ]
+  },
+  "87": {
+    "key": "eorsv",
+    "words": [
+      "overs",
+      "roves",
+      "servo",
+      "verso"
+    ]
+  },
+  "88": {
+    "key": "aeprs",
+    "words": [
+      "pares",
+      "parse",
+      "pears",
+      "rapes",
+      "reaps",
+      "spare",
+      "spear"
+    ]
+  },
+  "89": {
+    "key": "aprst",
+    "words": [
+      "parts",
+      "prats",
+      "sprat",
+      "strap",
+      "tarps",
+      "traps"
+    ]
+  },
+  "90": {
+    "key": "aepst",
+    "words": [
+      "paste",
+      "pates",
+      "septa",
+      "spate",
+      "tapes"
+    ]
+  },
+  "91": {
+    "key": "einps",
+    "words": [
+      "penis",
+      "pines",
+      "snipe",
+      "spine"
+    ]
+  },
+  "92": {
+    "key": "eiprs",
+    "words": [
+      "piers",
+      "pries",
+      "prise",
+      "spire"
+    ]
+  },
+  "93": {
+    "key": "eoprs",
+    "words": [
+      "pores",
+      "poser",
+      "prose",
+      "repos",
+      "ropes",
+      "spore"
+    ]
+  },
+  "94": {
+    "key": "einrs",
+    "words": [
+      "reins",
+      "resin",
+      "rinse",
+      "risen",
+      "siren"
+    ]
+  },
+  "95": {
+    "key": "eirst",
+    "words": [
+      "resit",
+      "rites",
+      "tiers",
+      "tires",
+      "tries"
+    ]
+  },
+  "96": {
+    "key": "eorsw",
+    "words": [
+      "resow",
+      "sower",
+      "swore",
+      "worse"
+    ]
+  },
+  "97": {
+    "key": "orstu",
+    "words": [
+      "roust",
+      "routs",
+      "torus",
+      "tours"
+    ]
+  },
+  "98": {
+    "key": "eersv",
+    "words": [
+      "serve",
+      "sever",
+      "veers",
+      "verse"
+    ]
+  }
+}
