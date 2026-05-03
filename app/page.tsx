@@ -241,9 +241,7 @@ export default function Home() {
       </div>
 
       {/* GRID */}
-      <div
-        className="flex flex-col gap-2 justify-center items-center min-w-90"
-      >
+      <div className="flex flex-col gap-2 justify-center items-center min-w-90">
         <div className="flex w-10 bg-[#032235] border-2 border-cyan-400 py-1 justify-center rounded-md">
           <div className="flex flex-col gap-2"> 
             {generateRows(group.words, group.alignments)}
