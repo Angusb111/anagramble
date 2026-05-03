@@ -67,13 +67,6 @@ export default function LoseModal({
             </li>
           ))}
         </ul>
-
-        <button
-          onClick={onClose}
-          className="mt-5 w-full bg-red-600 hover:bg-red-700 rounded py-2 text-sm font-medium"
-        >
-          Try Again
-        </button>
       </div>
     </div>
   );

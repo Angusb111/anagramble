@@ -30,6 +30,9 @@ export default function Home() {
   const inputRef = useRef(null);
   const [errorRow, setErrorRow] = useState<number | null>(null);
   const [lives, setLives] = useState(4);
+  const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 5));
+
+  
 
   const {
     isOpen: isGuessesOpen,
@@ -60,6 +63,8 @@ export default function Home() {
 
     const alignments = generateRowAlignments(shuffledWords, selected.key);
 
+    console.log(randomInt);
+    
     setGroup({
       key: selected.key,
       words: shuffledWords,
@@ -68,8 +73,10 @@ export default function Home() {
   }, []);
 
   function generateRowAlignments(words: string[], key: string) {
-    const randomInt: number = Math.floor(Math.random() * 5);
-    const keyLetter: string = words[1][randomInt];
+
+
+    const keyLetter: string = key[randomInt];
+
     let alignments: any[] = new Array(4);
     let iteration = 0;
     for (const word of words) {
@@ -182,10 +189,18 @@ export default function Home() {
         const alignmentIndex = group.alignments[activeRow];
         const lockedLetter = group.words[activeRow][alignmentIndex];
 
-        if (prev.length === alignmentIndex) {
-          return (prev + lockedLetter + key.toLowerCase()).slice(0, 5);
+        if (alignmentIndex === 4) { // alignmentindex is last letter in word
+          if ((prev.length + 1) === alignmentIndex) { // user just submitted the 2nd to last letter
+            return (prev + key.toLowerCase() + lockedLetter).slice(0, 5);
+          }
+        } else { //it is between the 1st and 4th letters
+          if (prev.length === alignmentIndex) { // user submitted a letter in the alignment box
+            return (prev + lockedLetter + key.toLowerCase()).slice(0, 5);
+          }
         }
+
         return (prev + key.toLowerCase()).slice(0, 5);
+
       });
     }
   };
@@ -255,13 +270,11 @@ export default function Home() {
       </div>
 
       {/* Keyboard */}
-      <div className="flex flex-col gap-[6px]">
-        <CustomKeyRow items={"qwertyuiop".split("")} onKeyPress={handleKeyPress} />
-        <CustomKeyRow items={"asdfghjkl".split("")} onKeyPress={handleKeyPress} />
-        <div className="flex flex-row gap-[6px]">
-          <div key={"enter"} onClick={() => submitGuess()} className="bg-gray-600 h-14 flex items-center justify-center font-semibold text-sm p-2 rounded-sm cursor-pointer">ENTER</div>
-          <CustomKeyRow items={"zxcvbnm".split("")} onKeyPress={handleKeyPress} />
-          <div key={"bkspc"} onClick={handleBackspace} className="bg-gray-600 h-14 flex items-center justify-center font-semibold text-l p-2 pe-3 rounded-sm cursor-pointer">
+      <div className="flex flex-col gap-8">
+        <CustomKeyRow items={group.key.split("").filter((_, i) => i !== randomInt)} onKeyPress={handleKeyPress} />
+        <div className="flex flex-row gap-3 justify-between">
+          <div key={"enter"} onClick={() => submitGuess()} className="bg-gray-600 w-2/3 flex-grow flex items-center justify-center font-semibold text-sm p-2 rounded-sm cursor-pointer">ENTER</div>
+          <div key={"bkspc"} onClick={handleBackspace} className="bg-gray-600 h-14 w-1/3 flex items-center justify-center font-semibold text-l p-2 pe-3 rounded-sm cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
             </svg>
