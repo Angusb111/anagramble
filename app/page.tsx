@@ -30,9 +30,44 @@ export default function Home() {
   const inputRef = useRef(null);
   const [errorRow, setErrorRow] = useState<number | null>(null);
   const [lives, setLives] = useState(4);
-  const [randomInt, setRandomInt] = useState(Math.floor(Math.random() * 5));
 
-  
+  const [randomInt, setRandomInt] = useState(() => {
+    const now = new Date();
+    const key = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
+
+    let seed = 0;
+    for (let i = 0; i < key.length; i++) {
+      seed = (seed * 31 + key.charCodeAt(i)) >>> 0;
+    }
+
+    // one RNG step
+    seed ^= seed << 13;
+    seed ^= seed >> 17;
+    seed ^= seed << 5;
+
+    return Math.abs(seed) % 5; // 0–4
+  });
+
+  const [Selector, setSelector] = useState(() => {
+    const now = new Date();
+    const key = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
+
+    let seed = 0;
+    for (let i = 0; i < key.length; i++) {
+      seed = (seed * 31 + key.charCodeAt(i)) >>> 0;
+    }
+
+    // one RNG step
+    seed ^= seed << 13;
+    seed ^= seed >> 17;
+    seed ^= seed << 5;
+
+    return Math.abs((seed) % 65) + 1 ; // 0–4
+  });
+
+  const selected: any = (puzzleData as any)[Selector];
+
+  const allWords: any[] = selected.words;
 
   const {
     isOpen: isGuessesOpen,
@@ -53,13 +88,24 @@ export default function Home() {
     closeModal: closeHowToModal,
   } = useHowToPlayModal();
 
+
+
   useEffect(() => {
     const keys = Object.keys(puzzleData);
-    const random = keys[Math.floor(Math.random() * keys.length)];
-    const selected: any = (puzzleData as any)[random];
-    const shuffledWords: string[] = [...selected.words]
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 4);
+    
+
+    
+
+    let s = Selector;
+    const shuffledWords = [...selected.words];
+
+    for (let i = shuffledWords.length - 1; i > 0; i--) {
+      s = (s * 9301 + 49297) % 233280;
+      const j = Math.floor((s / 233280) * (i + 1));
+      [shuffledWords[i], shuffledWords[j]] = [shuffledWords[j], shuffledWords[i]];
+    }
+
+    shuffledWords.length = 4;
 
     const alignments = generateRowAlignments(shuffledWords, selected.key);
 
@@ -71,6 +117,8 @@ export default function Home() {
       alignments: alignments
     });
   }, []);
+
+  
 
   function generateRowAlignments(words: string[], key: string) {
 
@@ -144,7 +192,7 @@ export default function Home() {
 
   function isValid(word: string) {
     const lower = word.toLowerCase();
-    if (!group?.words.includes(lower)) return false;
+    if (!allWords.includes(lower)) return false;
     if (guessedWords.includes(lower)) return false;
     return true;
   }
@@ -162,7 +210,7 @@ export default function Home() {
         setActiveRow(prev => prev + 1);
 
         if (updated.length === group.words.length) {
-          openGuessesModal(updated);
+          openGuessesModal(updated, lives); //win
         }
         setCurrentGuess("");
       } else {
@@ -290,6 +338,7 @@ export default function Home() {
       <GuessesModal
         isOpen={isGuessesOpen}
         guesses={guessedWords}
+        lives={lives}
         onClose={closeGuessesModal}
       />
 

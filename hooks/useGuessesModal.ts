@@ -4,9 +4,11 @@ import { useState } from "react";
 export function useGuessesModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [guesses, setGuesses] = useState<string[]>([]);
+  const [lives, setLives] = useState<number>(0);
 
-  function openModal(guessesArray: string[]) {
+  function openModal(guessesArray: string[], livesCount: number) {
     setGuesses(guessesArray);
+    setLives(livesCount);
     setIsOpen(true);
   }
 
@@ -17,6 +19,7 @@ export function useGuessesModal() {
   return {
     isOpen,
     guesses,
+    lives,
     openModal,
     closeModal,
   };
