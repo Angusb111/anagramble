@@ -7,7 +7,15 @@ type Props = {
   onClose: () => void;
 };
 
+
+
 export default function HowToPlayModal({ isOpen, onClose }: Props) {
+  const isDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const activeColor = isDark
+    ? "oklch(68.5% 0.169 237.323)" // dark mode color (sky)
+    : "oklch(46.6% 0.025 107.3)";  // light mode color (olive)
   useEffect(() => {
     function handleEsc(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -16,7 +24,7 @@ export default function HowToPlayModal({ isOpen, onClose }: Props) {
     if (isOpen) {
       window.addEventListener("keydown", handleEsc);
     }
-
+    
     return () => window.removeEventListener("keydown", handleEsc);
   }, [isOpen, onClose]);
 
@@ -28,18 +36,18 @@ export default function HowToPlayModal({ isOpen, onClose }: Props) {
       onClick={onClose}
     >
       <div
-        className="relative bg-[#0c111a] border border-slate-800 rounded-xl p-6 w-[420px] shadow-lg text-sm text-slate-300"
+        className="relative bg-taupe-200 dark:bg-[#0c111a] border border-slate-800 rounded-xl p-6 w-[420px] shadow-lg text-sm dark:text-slate-300"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-slate-400 hover:text-white text-lg"
+          className="absolute top-3 right-3 dark:text-slate-400 hover:text-white text-lg"
         >
           ✕
         </button>
 
-        <h2 className="text-xl font-semibold mb-4 text-white">
+        <h2 className="text-xl font-semibold mb-4 dark:text-white">
           How to Play
         </h2>
 
@@ -67,49 +75,52 @@ export default function HowToPlayModal({ isOpen, onClose }: Props) {
         {/* Row 1 */}
         <div className="flex gap-1 translate-x-[44px]">
             {"TIRES".split("").map((l, i) => (
-            <div
+              <div
                 key={i}
-                className={`w-10 h-10 flex items-center justify-center rounded-md font-semibold text-white border border-cyan-600 ${
-                i === 1 ? "bg-cyan-600" : "bg-black-800"
-                }`}
-            >
+                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-500 dark:border-sky-400"
+                style={{
+                  backgroundColor: i === 1 ? activeColor : "transparent",
+                }}
+              >
                 {l}
-            </div>
+              </div>
             ))}
         </div>
 
         {/* Row 2 */}
         <div className="flex gap-1 translate-x-[-44px]">
             {"RESIT".split("").map((l, i) => (
-            <div
+              <div
                 key={i}
-                className={`w-10 h-10 flex items-center justify-center rounded-md font-semibold text-white border border-cyan-600 ${
-                i === 3 ? "bg-cyan-600" : "bg-black-800"
-                }`}
-            >
+                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-500 dark:border-sky-400"
+                style={{
+                  backgroundColor: i === 3 ? activeColor : "transparent",
+                }}
+              >
                 {l}
-            </div>
+              </div>
             ))}
         </div>
 
         {/* Row 3 */}
         <div className="flex gap-1 translate-x-[44px]">
             {"RITES".split("").map((l, i) => (
-            <div
+              <div
                 key={i}
-                className={`w-10 h-10 flex items-center justify-center rounded-md font-semibold text-white border border-cyan-600 ${
-                i === 1 ? "bg-cyan-600" : "bg-black-800"
-                }`}
-            >
+                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-500 dark:border-sky-400"
+                style={{
+                  backgroundColor: i === 1 ? activeColor : "transparent",
+                }}
+              >
                 {l}
-            </div>
+              </div>
             ))}
         </div>
 
         </div>
 
-        <p className="text-xs text-slate-400 mt-3 text-center">
-        Each word is shifted so the locked letter (blue) stays in the same column.
+        <p className="text-xs dark:text-slate-400 mt-3 text-center">
+        Each word is shifted so the locked letter stays in the same column.
         </p>
       </div>
     </div>

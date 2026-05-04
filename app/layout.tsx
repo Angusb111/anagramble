@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display, Figtree } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ThemeInit } from "@/components/ThemeInit";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -15,6 +16,7 @@ const dmSerif = DM_Serif_Display({
   variable: "--font-dm-serif",
   weight: "400",
 });
+
 
 export const metadata: Metadata = {
   title: "Anagramble",
@@ -32,6 +34,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", dmSans.variable, dmSerif.variable, "font-sans", figtree.variable)}
     >
       <body className="min-h-full flex flex-col">
+        <ThemeInit />
         {children}
       </body>
     </html>

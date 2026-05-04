@@ -33,10 +33,18 @@ export default function GuessesModal({ isOpen, guesses, lives, onClose }: Props)
       month: "short",
       day: "numeric",
     });
+    
+    const livesEmoji =
+      lives === 4 ? "🟩 🟩 🟩 🟩" :
+      lives === 3 ? "🟩 🟩 🟩 🟥" :
+      lives === 2 ? "🟩 🟩 🟥 🟥" :
+      lives === 1 ? "🟩 🟥 🟥 🟥" :
+      "🟥 🟥 🟥 🟥";
 
     const resultText =
       `Anagramble ${today}\n` +
       `Lives remaining: ${lives}/4\n` +
+      `${livesEmoji}\n` +
       `anagramble.angusbodle.nz`;
     try {
       if (navigator.share) {
@@ -59,19 +67,19 @@ export default function GuessesModal({ isOpen, guesses, lives, onClose }: Props)
       onClick={onClose} // click outside
     >
       <div
-        className="relative bg-[#0c111a] flex flex-col items-center gap-5 border border-slate-800 rounded-xl p-6 w-[400px] shadow-lg"
+        className="relative bg-taupe-300 dark:bg-[#0c111a] flex flex-col items-center gap-5 border border-slate-800 rounded-xl p-6 w-[400px] shadow-lg"
         onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
       >
         {/* Close X */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-slate-400 hover:text-white text-lg"
+          className="absolute top-3 right-3 dark:text-slate-400 hover:text-white text-lg"
         >
           ✕
         </button>
 
         <h2 className="text-4xl font-semibold mb-4 text-center">Well Done!</h2>
-        <p className="text-sm text-slate-300">You Won with {lives}/4 lives remaining.</p>
+        <p className="text-sm text-olive-800 dark:text-slate-300">You Won with {lives}/4 lives remaining.</p>
         <ul className="space-y-3 mb-2">
           {guesses.map((guess, i) => (
             <li key={guess + i} className="flex gap-1 justify-center">
@@ -86,7 +94,7 @@ export default function GuessesModal({ isOpen, guesses, lives, onClose }: Props)
             </li>
           ))}
         </ul>
-        <button className="bg-green-600 p-3 w-28 rounded-md text-sm border border-zinc-500" onClick={handleShare}>
+        <button className="bg-green-600 p-3 w-28 rounded-md text-sm border text-white border-zinc-500" onClick={handleShare}>
           Share
         </button>
       </div>

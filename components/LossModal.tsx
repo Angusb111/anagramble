@@ -33,22 +33,22 @@ export default function LoseModal({
       onClick={onClose}
     >
       <div
-        className="relative bg-[#0c111a] border border-slate-800 rounded-xl p-6 w-[420px] shadow-lg"
+        className="relative bg-taupe-300 dark:bg-[#0c111a] border border-slate-800 rounded-xl p-6 w-[420px] shadow-lg"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-slate-400 hover:text-white text-lg"
+          className="absolute top-3 right-3 dark:text-slate-400 hover:text-white text-lg"
         >
           ✕
         </button>
 
-        <h2 className="text-xl font-semibold mb-4 text-center text-red-400">
+        <h2 className="text-4xl font-semibold mb-4 text-center text-red-800 dark:text-red-400">
           OUT OF LIVES
         </h2>
 
-        <p className="text-sm text-slate-400 text-center mb-4">
+        <p className="text-sm dark:text-slate-400 text-center mb-4">
           Correct answers were:
         </p>
 

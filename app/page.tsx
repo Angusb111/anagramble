@@ -140,7 +140,7 @@ export default function Home() {
 
   function displayLives() {
     return Array.from({ length: lives }, (_, i) => (
-      <div key={i} className="p-1 bg-zinc-200 rounded-full"></div>
+      <div key={i} className="p-1 bg-olive-900 dark:bg-zinc-200 rounded-full"></div>
     ));
   }
 
@@ -156,13 +156,18 @@ export default function Home() {
         {word.split("").map((letter, colIndex) => {
           const isAligned = colIndex === alignments[rowIndex];
           const guessLetter = currentGuess[colIndex] || "";
-
+          const isDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          const keyBorder =
+            isDark ? "oklch(68.5% 0.169 237.323)" : //sky
+            "oklch(46.6% 0.025 107.3)"; //olive
           return (
             <div
               key={colIndex}
               className="w-8 h-8 text-xl font-semibold flex items-center justify-center border rounded-md"
               style={{
-                borderColor: isAligned ? '#032235' : '#009dc4',
+                borderColor: isAligned ? 'transparent' : keyBorder,
                 backgroundColor:
                   errorRow === rowIndex
                     ? "#ff4d4d"
@@ -285,27 +290,26 @@ export default function Home() {
   if (!group) return <div>Loading...</div>;
 
   return (
-    <div className="flex flex-col items-center justify-between max-h-screen min-h-screen bg-black text-white gap-10 pt-8 pb-3">
+    <div className="flex flex-col items-center justify-between max-h-screen flex-grow bg-taupe-200 dark:bg-black dark:text-white gap-10 pt-8 pb-3">
 
       {/* TITLE */}
       <div className="flex flex-col items-center justify-self-start gap-4">
         <h1 className="text-5xl font-serif ">ANAGRAMBLE</h1>
         <div className="flex flex-row justify-evenly w-full">
-          <h2>(beta)</h2>
-          <button className="bg-zinc-700 p-[2px] px-2 rounded-sm text-sm border border-zinc-500" onClick={openHowToModal}>help</button>
+          <button className="bg-olive-500 dark:bg-zinc-700 p-[2px] px-2 rounded-sm text-sm border border-olive-700 dark:border-zinc-500" onClick={openHowToModal}>How to Play</button>
         </div>
       </div>
       
       <div className="text-center flex flex-col gap-2">
         <p className="text-xs text-zinc-500">Make words from:</p>
-        <h2 className="text-3xl tracking-[0.3em] font-semibold text-white" style={{ fontFamily: "var(--font-dm-serif)" }}>
+        <h2 className="text-3xl tracking-[0.3em] font-semibold" style={{ fontFamily: "var(--font-dm-serif)" }}>
           {group.key.toUpperCase()}
         </h2>
       </div>
 
       {/* GRID */}
       <div className="flex flex-col gap-2 justify-center items-center min-w-90">
-        <div className="flex w-10 bg-[#032235] border-2 border-cyan-400 py-1 justify-center rounded-md">
+        <div className="flex w-10 bg-olive-500 dark:bg-[#032235] border-2 border-olive-300 dark:border-sky-400 py-1 justify-center rounded-md">
           <div className="flex flex-col gap-2"> 
             {generateRows(group.words, group.alignments)}
           </div>
@@ -318,11 +322,11 @@ export default function Home() {
       </div>
 
       {/* Keyboard */}
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-5">
         <CustomKeyRow items={group.key.split("").filter((_, i) => i !== randomInt)} onKeyPress={handleKeyPress} />
-        <div className="flex flex-row gap-3 justify-between">
-          <div key={"enter"} onClick={() => submitGuess()} className="bg-gray-600 w-2/3 flex-grow flex items-center justify-center font-semibold text-sm p-2 rounded-sm cursor-pointer">ENTER</div>
-          <div key={"bkspc"} onClick={handleBackspace} className="bg-gray-600 h-14 w-1/3 flex items-center justify-center font-semibold text-l p-2 pe-3 rounded-sm cursor-pointer">
+        <div className="flex flex-row gap-5 justify-between">
+          <div key={"enter"} onClick={() => submitGuess()} className="bg-olive-500 dark:bg-gray-600 w-2/3 flex-grow flex items-center justify-center font-semibold text-sm p-2 rounded-sm cursor-pointer">ENTER</div>
+          <div key={"bkspc"} onClick={handleBackspace} className="bg-olive-500 dark:bg-gray-600 h-14 w-1/3 flex items-center justify-center font-semibold text-l p-2 pe-3 rounded-sm cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
             </svg>
