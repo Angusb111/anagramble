@@ -62,7 +62,7 @@ export default function Home() {
     seed ^= seed >> 17;
     seed ^= seed << 5;
 
-    return Math.abs((seed) % 65) + 1 ; // 0–4
+    return Math.abs((seed) % 65) ; // 0–4
   });
 
   const selected: any = (puzzleData as any)[Selector];
