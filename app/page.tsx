@@ -298,7 +298,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-self-start gap-4">
         <h1 className="text-5xl font-serif ">ANAGRAMBLE</h1>
         <div className="flex flex-row justify-evenly w-full">
-          <button className="bg-olive-500 dark:bg-zinc-700 p-[2px] px-2 rounded-sm text-sm border border-olive-700 dark:border-zinc-500" onClick={openHowToModal}>How to Play</button>
+          <button className="bg-olive-400 dark:bg-zinc-700 p-[2px] px-2 rounded-sm text-sm border border-olive-300 dark:border-zinc-500" onClick={openHowToModal}>How to Play</button>
         </div>
       </div>
       
@@ -311,7 +311,7 @@ export default function Home() {
 
       {/* GRID */}
       <div className="flex flex-col gap-2 justify-center items-center min-w-90">
-        <div className="flex w-10 bg-olive-500 dark:bg-[#032235] border-2 border-olive-300 dark:border-sky-400 py-1 justify-center rounded-md">
+        <div className="flex w-10 bg-olive-400 dark:bg-[#032235] border-2 border-olive-300 dark:border-sky-400 py-1 justify-center rounded-md">
           <div className="flex flex-col gap-2"> 
             {generateRows(group.words, group.alignments)}
           </div>
@@ -327,8 +327,8 @@ export default function Home() {
       <div className="flex flex-col gap-5">
         <CustomKeyRow items={group.key.split("").filter((_, i) => i !== randomInt)} onKeyPress={handleKeyPress} />
         <div className="flex flex-row gap-5 justify-between">
-          <div key={"enter"} onClick={() => submitGuess()} className="bg-olive-500 dark:bg-gray-600 w-2/3 flex-grow flex items-center justify-center font-semibold text-sm p-2 rounded-sm cursor-pointer">ENTER</div>
-          <div key={"bkspc"} onClick={handleBackspace} className="bg-olive-500 dark:bg-gray-600 h-14 w-1/3 flex items-center justify-center font-semibold text-l p-2 pe-3 rounded-sm cursor-pointer">
+          <div key={"enter"} onClick={() => submitGuess()} className="bg-olive-400 dark:bg-gray-600 w-2/3 flex-grow flex items-center justify-center font-semibold text-sm p-2 rounded-sm cursor-pointer">ENTER</div>
+          <div key={"bkspc"} onClick={handleBackspace} className="bg-olive-400 dark:bg-gray-600 h-14 w-1/3 flex items-center justify-center font-semibold text-l p-2 pe-3 rounded-sm cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
             </svg>

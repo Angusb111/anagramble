@@ -77,7 +77,7 @@ export default function HowToPlayModal({ isOpen, onClose }: Props) {
             {"TIRES".split("").map((l, i) => (
               <div
                 key={i}
-                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-500 dark:border-sky-400"
+                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-400 dark:border-sky-400"
                 style={{
                   backgroundColor: i === 1 ? activeColor : "transparent",
                 }}
@@ -92,7 +92,7 @@ export default function HowToPlayModal({ isOpen, onClose }: Props) {
             {"RESIT".split("").map((l, i) => (
               <div
                 key={i}
-                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-500 dark:border-sky-400"
+                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-400 dark:border-sky-400"
                 style={{
                   backgroundColor: i === 3 ? activeColor : "transparent",
                 }}
@@ -107,7 +107,7 @@ export default function HowToPlayModal({ isOpen, onClose }: Props) {
             {"RITES".split("").map((l, i) => (
               <div
                 key={i}
-                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-500 dark:border-sky-400"
+                className="w-10 h-10 flex items-center justify-center rounded-md font-semibold border border-olive-400 dark:border-sky-400"
                 style={{
                   backgroundColor: i === 1 ? activeColor : "transparent",
                 }}
