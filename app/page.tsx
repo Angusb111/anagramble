@@ -29,7 +29,7 @@ export default function Home() {
   const [activeRow, setActiveRow] = useState(0);
   const inputRef = useRef(null);
   const [errorRow, setErrorRow] = useState<number | null>(null);
-  const [lives, setLives] = useState(4);
+  const [lives, setLives] = useState(3);
 
   const [randomInt, setRandomInt] = useState(() => {
     const now = new Date();

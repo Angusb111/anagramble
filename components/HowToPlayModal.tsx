@@ -66,7 +66,7 @@ export default function HowToPlayModal({ isOpen, onClose }: Props) {
           </p>
 
           <p>
-            You start with 4 lives. Each incorrect guess takes one away!
+            You start with 3 lives. Each incorrect guess takes one away!
           </p>
         </div>
 

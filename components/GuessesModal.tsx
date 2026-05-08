@@ -43,7 +43,7 @@ export default function GuessesModal({ isOpen, guesses, lives, onClose }: Props)
 
     const resultText =
       `Anagramble ${today}\n` +
-      `Lives remaining: ${lives}/4\n` +
+      `Lives remaining: ${lives}/3\n` +
       `${livesEmoji}\n` +
       `anagramble.angusbodle.nz`;
     try {
@@ -79,7 +79,7 @@ export default function GuessesModal({ isOpen, guesses, lives, onClose }: Props)
         </button>
 
         <h2 className="text-4xl font-semibold mb-4 text-center">Well Done!</h2>
-        <p className="text-sm text-olive-800 dark:text-slate-300">You Won with {lives}/4 lives remaining.</p>
+        <p className="text-sm text-olive-800 dark:text-slate-300">You Won with {lives}/3 lives remaining.</p>
         <ul className="space-y-3 mb-2">
           {guesses.map((guess, i) => (
             <li key={guess + i} className="flex gap-1 justify-center">
