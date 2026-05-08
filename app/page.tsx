@@ -62,7 +62,7 @@ export default function Home() {
     seed ^= seed >> 17;
     seed ^= seed << 5;
 
-    return Math.abs((seed) % 65) ; // 0–4
+    return Math.abs((seed) % 62) ; // 0–61
   });
 
   const selected: any = (puzzleData as any)[Selector];
@@ -128,6 +128,8 @@ export default function Home() {
     let alignments: any[] = new Array(4);
     let iteration = 0;
     for (const word of words) {
+      console.log(word);
+      
       alignments[iteration] = word.indexOf(keyLetter);
       iteration++;
     }

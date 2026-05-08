@@ -32,7 +32,8 @@
     "words": [
       "angel",
       "angle",
-      "glean"
+      "glean",
+      "genal"
     ]
   },
   "5": {
@@ -49,7 +50,8 @@
     "words": [
       "roast",
       "sorta",
-      "taros"
+      "taros",
+      "toras"
     ]
   },
   "7": {
@@ -107,11 +109,12 @@
     ]
   },
   "13": {
-    "key": "enrst",
+    "key": "eorsw",
     "words": [
-      "rents",
-      "stern",
-      "terns"
+      "resow",
+      "sower",
+      "swore",
+      "worse"
     ]
   },
   "14": {
@@ -119,15 +122,18 @@
     "words": [
       "reset",
       "steer",
-      "trees"
+      "trees",
+      "terse"
     ]
   },
   "15": {
-    "key": "aehrt",
+    "key": "eirst",
     "words": [
-      "earth",
-      "hater",
-      "heart"
+      "resit",
+      "rites",
+      "tiers",
+      "tires",
+      "tries"
     ]
   },
   "16": {
@@ -162,7 +168,8 @@
     "words": [
       "manes",
       "means",
-      "names"
+      "names",
+      "mensa"
     ]
   },
   "20": {
@@ -197,7 +204,8 @@
     "words": [
       "dries",
       "rides",
-      "sired"
+      "sired",
+      "diers"
     ]
   },
   "24": {
@@ -210,11 +218,13 @@
     ]
   },
   "25": {
-    "key": "adeis",
+    "key": "einrs",
     "words": [
-      "aides",
-      "aside",
-      "ideas"
+      "reins",
+      "resin",
+      "rinse",
+      "risen",
+      "siren"
     ]
   },
   "26": {
@@ -222,7 +232,8 @@
     "words": [
       "heals",
       "leash",
-      "shale"
+      "shale",
+      "hales"
     ]
   },
   "27": {
@@ -248,7 +259,8 @@
     "words": [
       "heirs",
       "hires",
-      "shire"
+      "shire",
+      "shier"
     ]
   },
   "30": {
@@ -268,7 +280,8 @@
     "words": [
       "inset",
       "stein",
-      "tines"
+      "tines",
+      "senit"
     ]
   },
   "32": {
@@ -369,7 +382,8 @@
     "words": [
       "dales",
       "deals",
-      "leads"
+      "leads",
+      "slade"
     ]
   },
   "43": {
@@ -396,7 +410,8 @@
     "words": [
       "delis",
       "idles",
-      "slide"
+      "slide",
+      "siled"
     ]
   },
   "46": {
@@ -432,7 +447,8 @@
     "words": [
       "gears",
       "rages",
-      "sarge"
+      "sarge",
+      "agers"
     ]
   },
   "50": {
@@ -458,7 +474,8 @@
     "words": [
       "lairs",
       "liars",
-      "rails"
+      "rails",
+      "rials"
     ]
   },
   "53": {
@@ -545,35 +562,6 @@
       "repos",
       "ropes",
       "spore"
-    ]
-  },
-  "62": {
-    "key": "einrs",
-    "words": [
-      "reins",
-      "resin",
-      "rinse",
-      "risen",
-      "siren"
-    ]
-  },
-  "63": {
-    "key": "eirst",
-    "words": [
-      "resit",
-      "rites",
-      "tiers",
-      "tires",
-      "tries"
-    ]
-  },
-  "64": {
-    "key": "eorsw",
-    "words": [
-      "resow",
-      "sower",
-      "swore",
-      "worse"
     ]
   },
   "0": {
