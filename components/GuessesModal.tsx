@@ -35,11 +35,10 @@ export default function GuessesModal({ isOpen, guesses, lives, onClose }: Props)
     });
     
     const livesEmoji =
-      lives === 4 ? "🟩 🟩 🟩 🟩" :
-      lives === 3 ? "🟩 🟩 🟩 🟥" :
-      lives === 2 ? "🟩 🟩 🟥 🟥" :
-      lives === 1 ? "🟩 🟥 🟥 🟥" :
-      "🟥 🟥 🟥 🟥";
+      lives === 3 ? "🟩 🟩 🟩" :
+      lives === 2 ? "🟩 🟩 🟥" :
+      lives === 1 ? "🟩 🟥 🟥" :
+      "🟥 🟥 🟥";
 
     const resultText =
       `Anagramble ${today}\n` +
